@@ -2,19 +2,18 @@
 
 App from chapter 4 of [Django for Beginners](https://djangoforbeginners.com/).
 
-# how to use?
+## run locally
 
-dependencies
-
-* install Poetry
 * install dependencies: `poetry install`
+* run migrations: `make mig`
+* start dev server: `make srv`
 
-`Makefile` for local dev
 ```Makefile
 ======================================================================
 
 🛠  UTILS
 
+mig:        run migrations
 srv:        run dev server
 ind:        open index page
 todo:       view all todos
@@ -23,6 +22,7 @@ todo:       view all todos
 
 env:        show environment info
 deps:       list prod dependencies
+freeze:     convert lockfile to requirements.txt
 
 ======================================================================
 ```
