@@ -4,6 +4,7 @@ help:
 	@echo
 	@echo "🛠  UTILS"
 	@echo
+	@echo "mig:        run migrations"
 	@echo "srv:        run dev server"
 	@echo "ind:        open index page"
 	@echo "todo:       view all todos"
@@ -12,6 +13,7 @@ help:
 	@echo
 	@echo "env:        show environment info"
 	@echo "deps:       list prod dependencies"
+	@echo "freeze:     convert lockfile to requirements.txt"
 	@echo
 	@echo "======================================================================"
 	@echo
@@ -19,6 +21,9 @@ help:
 #
 # 🛠 UTILS
 #
+
+mig:
+	poetry run python manage.py migrate
 
 srv:
 	poetry run python manage.py runserver
@@ -38,3 +43,6 @@ env:
 
 deps:
 	poetry show --tree --no-dev
+
+freeze:
+	poetry export -f requirements.txt > requirements.txt
